@@ -7,11 +7,11 @@
     <version>4.0.0</version>
   </parent>
 
-  <groupId>io.github.msobkow.v3_1</groupId>
-  <artifactId>io.github.msobkow.v3_1.cfbam.cfbamappsetup</artifactId>
+  <groupId>server.markhome.mcf.v3_1</groupId>
+  <artifactId>server.markhome.mcf.v3_1.cfbam.cfbamappsetup</artifactId>
   <version>3.1.42</version>
-  <name>io.github.msobkow.v3_1.cfbam.cfbamappsetup</name>
-  <description>msobkow 3.1.42 CFBam cfbamappsetup - JavaFX program to perform initial application configuration and setup</description>
+  <name>server.markhome.mcf.v3_1.cfbam.cfbamappsetup</name>
+  <description>mcf 3.1.42 CFBam cfbamappsetup - JavaFX program to perform initial application configuration and setup</description>
   <url>mailto:mark.sobkow@gmail.com</url>
 
   <properties>
@@ -34,19 +34,19 @@
 
   <dependencies>
     <dependency>
-      <groupId>io.github.msobkow.v3_1</groupId>
-      <artifactId>io.github.msobkow.v3_1.cflib</artifactId>
-      <version>3.1</version>
+      <groupId>server.markhome.mcf.v3_1</groupId>
+      <artifactId>server.markhome.mcf.v3_1.cflib</artifactId>
+      <version>3.1.42</version>
     </dependency>
     <dependency>
-      <groupId>io.github.msobkow.v3_1</groupId>
-      <artifactId>io.github.msobkow.v3_1.cflib.dbutil</artifactId>
-      <version>3.1</version>
+      <groupId>server.markhome.mcf.v3_1</groupId>
+      <artifactId>server.markhome.mcf.v3_1.cflib.dbutil</artifactId>
+      <version>3.1.42</version>
     </dependency>
     <dependency>
-      <groupId>io.github.msobkow.v3_1</groupId>
-      <artifactId>io.github.msobkow.v3_1.cflib.javafx</artifactId>
-      <version>3.1</version>
+      <groupId>server.markhome.mcf.v3_1</groupId>
+      <artifactId>server.markhome.mcf.v3_1.cflib.javafx</artifactId>
+      <version>3.1.42</version>
     </dependency>
     <dependency>
         <groupId>ch.qos.logback</groupId>
@@ -107,33 +107,33 @@
         <artifactId>spring-orm</artifactId>
     </dependency>
     <dependency>
-        <groupId>io.github.msobkow.v3_1</groupId>
-        <artifactId>io.github.msobkow.v3_1.cfsec.cfsec</artifactId>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfsec.cfsec</artifactId>
         <version>3.1.42</version>
     </dependency>
     <dependency>
-        <groupId>io.github.msobkow.v3_1</groupId>
-        <artifactId>io.github.msobkow.v3_1.cfint.cfint</artifactId>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfint.cfint</artifactId>
         <version>3.1.42</version>
     </dependency>
     <dependency>
-        <groupId>io.github.msobkow.v3_1</groupId>
-        <artifactId>io.github.msobkow.v3_1.cfbam.cfbam</artifactId>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfbam.cfbam</artifactId>
         <version>3.1.42</version>
     </dependency>
     <dependency>
-        <groupId>io.github.msobkow.v3_1</groupId>
-        <artifactId>io.github.msobkow.v3_1.cfsec.cfsecbuff</artifactId>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfsec.cfsecbuff</artifactId>
         <version>3.1.42</version>
     </dependency>
     <dependency>
-        <groupId>io.github.msobkow.v3_1</groupId>
-        <artifactId>io.github.msobkow.v3_1.cfint.cfintbuff</artifactId>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfint.cfintbuff</artifactId>
         <version>3.1.42</version>
     </dependency>
     <dependency>
-        <groupId>io.github.msobkow.v3_1</groupId>
-        <artifactId>io.github.msobkow.v3_1.cfbam.cfbambuff</artifactId>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfbam.cfbambuff</artifactId>
         <version>3.1.42</version>
     </dependency>
   </dependencies>
@@ -141,12 +141,12 @@
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus release repository</name>
-			<url>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</url>
+			<url>http://nexus3.mcf.markhome.server:8081/repository/mcf.markhome.server-hosted/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<name>Nexus release repository</name>
-			<url>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</url>
+			<url>http://nexus3.mcf.markhome.server:8081/repository/mcf.markhome.server-hosted/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -182,7 +182,7 @@
 				</executions>
 				<configuration>
 					<serverId>nexus</serverId>
-					<nexusUrl>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</nexusUrl>
+					<nexusUrl>http://nexus3.mcf.markhome.server:8081/repository/mcf.markhome.server-hosted/</nexusUrl>
 					<skipStaging>true</skipStaging>
 				</configuration>
 			</plugin>
@@ -191,7 +191,7 @@
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.8</version>
 				<configuration>
-                	<mainClass>io.github.msobkow.v3_1.cfbam.cfbamappsetup.fx.CFBamAppSetupFxApplication</mainClass>
+                	<mainClass>server.markhome.mcf.v3_1.cfbam.cfbamappsetup.fx.CFBamAppSetupFxApplication</mainClass>
 				</configuration>
 			</plugin>
     		<plugin>
@@ -205,7 +205,7 @@
 						</goals>
 						<configuration>
 							<classifier>spring-boot</classifier>
-							<mainClass>io.github.msobkow.v3_1.cfbam.cfbamappsetup.CFBamAppSetup</mainClass>
+							<mainClass>server.markhome.mcf.v3_1.cfbam.cfbamappsetup.CFBamAppSetup</mainClass>
 						</configuration>
 					</execution>
 				</executions>
