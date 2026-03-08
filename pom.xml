@@ -9,15 +9,15 @@
 
   <groupId>io.github.msobkow.v3_1</groupId>
   <artifactId>io.github.msobkow.v3_1.cfbam.cfbamappsetup</artifactId>
-  <version>3.1</version>
+  <version>3.1.42</version>
   <name>io.github.msobkow.v3_1.cfbam.cfbamappsetup</name>
-  <description>msobkow 3.1 CFBam cfbamappsetup - JavaFX program to perform initial application configuration and setup</description>
+  <description>msobkow 3.1.42 CFBam cfbamappsetup - JavaFX program to perform initial application configuration and setup</description>
   <url>mailto:mark.sobkow@gmail.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <spring.version>4.0.0</spring.version>
     <orm.version>7.0.2</orm.version>
     <xerces.version>2.12.2</xerces.version>
@@ -109,79 +109,124 @@
     <dependency>
         <groupId>io.github.msobkow.v3_1</groupId>
         <artifactId>io.github.msobkow.v3_1.cfsec.cfsec</artifactId>
-        <version>3.1</version>
+        <version>3.1.42</version>
     </dependency>
     <dependency>
         <groupId>io.github.msobkow.v3_1</groupId>
         <artifactId>io.github.msobkow.v3_1.cfint.cfint</artifactId>
-        <version>3.1</version>
+        <version>3.1.42</version>
     </dependency>
     <dependency>
         <groupId>io.github.msobkow.v3_1</groupId>
         <artifactId>io.github.msobkow.v3_1.cfbam.cfbam</artifactId>
-        <version>3.1</version>
+        <version>3.1.42</version>
     </dependency>
     <dependency>
         <groupId>io.github.msobkow.v3_1</groupId>
         <artifactId>io.github.msobkow.v3_1.cfsec.cfsecbuff</artifactId>
-        <version>3.1</version>
+        <version>3.1.42</version>
     </dependency>
     <dependency>
         <groupId>io.github.msobkow.v3_1</groupId>
         <artifactId>io.github.msobkow.v3_1.cfint.cfintbuff</artifactId>
-        <version>3.1</version>
+        <version>3.1.42</version>
     </dependency>
     <dependency>
         <groupId>io.github.msobkow.v3_1</groupId>
         <artifactId>io.github.msobkow.v3_1.cfbam.cfbambuff</artifactId>
-        <version>3.1</version>
+        <version>3.1.42</version>
     </dependency>
   </dependencies>
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Nexus release repository</name>
+			<url>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Nexus release repository</name>
+			<url>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
-  <build>
-    <plugins>
-        <plugin>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-maven-plugin</artifactId>
-            <version>0.0.8</version>
-            <configuration>
-                <mainClass>io.github.msobkow.v3_1.cfbam.cfbamappsetup.fx.CFBamAppSetupFxApplication</mainClass>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>repackage</goal>
-                    </goals>
-                    <configuration>
-                        <classifier>spring-boot</classifier>
-                        <mainClass>
-                            io.github.msobkow.v3_1.cfbam.cfbamappsetup.CFBamAppSetup
-                        </mainClass>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.5.3</version>
-            <configuration>
-                <useModulePath>false</useModulePath>
-            </configuration>
-        </plugin>
-    </plugins>
-  </build>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh-external</artifactId>
+				<version>1.0-beta-6</version>
+			</extension>
+		</extensions>
+    	<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>3.1.4</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<serverId>nexus</serverId>
+					<nexusUrl>http://nexus3.msobkow.github.io:8081/repository/msobkow.github.io-hosted/</nexusUrl>
+					<skipStaging>true</skipStaging>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.8</version>
+				<configuration>
+                	<mainClass>io.github.msobkow.v3_1.cfbam.cfbamappsetup.fx.CFBamAppSetupFxApplication</mainClass>
+				</configuration>
+			</plugin>
+    		<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>spring-boot</classifier>
+							<mainClass>io.github.msobkow.v3_1.cfbam.cfbamappsetup.CFBamAppSetup</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+      		<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-surefire-plugin</artifactId>
+        		<version>3.5.3</version>
+        		<configuration>
+          			<useModulePath>false</useModulePath>
+        		</configuration>
+      		</plugin>
+		</plugins>
+	</build>
 
   <reporting>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.5.3</version><!--$NO-MVN-MAN-VER$-->
+            <version>3.5.3</version>
             <configuration>
                 <skipTests>false</skipTests>
                 <useSystemClassLoader>true</useSystemClassLoader>
@@ -193,3 +238,4 @@
     </plugins>
   </reporting>
 </project>
+
