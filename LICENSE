@@ -6,7 +6,7 @@ These files are part of Mark's Code Fractal CFBam.
 
 Mark's Code Fractal CFBam is available under dual commercial license from
 Mark Stephen Sobkow, or under the terms of the GNU General Public License,
-Version 3 or later.
+Version 3 or later with classpath and static linking exceptions.
 
 As a special exception, Mark Sobkow gives you permission to link this library
 with independent modules to produce an executable, provided that none of them
