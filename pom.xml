@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>4.0.3</version>
+    <version>4.0.5</version>
   </parent>
 
   <groupId>server.markhome.mcf.v3_1</groupId>
@@ -16,9 +16,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
-    <spring.version>4.0.3</spring.version>
+    <maven.compiler.source>25</maven.compiler.source>
+    <maven.compiler.target>25</maven.compiler.target>
+    <spring.version>4.0.5</spring.version>
     <orm.version>7.0.2</orm.version>
     <xerces.version>2.12.2</xerces.version>
     <junit-jupiter.version>6.0.1</junit-jupiter.version>
@@ -29,7 +29,7 @@
 	<jakarta-annotation-api.version>3.0.0</jakarta-annotation-api.version>
 	<jakarta-persistence-api.version>3.2.0</jakarta-persistence-api.version>
 	<postgresql.version>42.7.8</postgresql.version>
-	<javafx.version>21.0.9</javafx.version>
+	<javafx.version>25.0.2</javafx.version>
   </properties>
 
   <dependencies>
