@@ -18,18 +18,19 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>25</maven.compiler.source>
     <maven.compiler.target>25</maven.compiler.target>
-    <spring.version>4.0.5</spring.version>
-    <orm.version>7.0.2</orm.version>
     <xerces.version>2.12.2</xerces.version>
     <junit-jupiter.version>6.0.1</junit-jupiter.version>
 	<logback.version>1.5.22</logback.version>
-	<commons-codec.version>1.20.0</commons-codec.version>
+	<commons-codec.version>1.21.0</commons-codec.version>
 	<commons-text.version>1.15.0</commons-text.version>
 	<jaxb-api.version>2.4.0-b180725.0427</jaxb-api.version>
 	<jakarta-annotation-api.version>3.0.0</jakarta-annotation-api.version>
 	<jakarta-persistence-api.version>3.2.0</jakarta-persistence-api.version>
+	<spring.version>4.0.5</spring.version>
+    <mcf.version>3.1.42</mcf.version>
+    <orm.version>7.0.2</orm.version>
 	<postgresql.version>42.7.11</postgresql.version>
-	<javafx.version>25.0.2</javafx.version>
+	<javafx.version>21.0.9</javafx.version>
   </properties>
 
   <dependencies>
