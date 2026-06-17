@@ -123,21 +123,6 @@
         <artifactId>server.markhome.mcf.v3_1.cfbam.cfbam</artifactId>
         <version>3.1.42</version>
     </dependency>
-    <dependency>
-        <groupId>server.markhome.mcf.v3_1</groupId>
-        <artifactId>server.markhome.mcf.v3_1.cfsec.cfsecbuff</artifactId>
-        <version>3.1.42</version>
-    </dependency>
-    <dependency>
-        <groupId>server.markhome.mcf.v3_1</groupId>
-        <artifactId>server.markhome.mcf.v3_1.cfint.cfintbuff</artifactId>
-        <version>3.1.42</version>
-    </dependency>
-    <dependency>
-        <groupId>server.markhome.mcf.v3_1</groupId>
-        <artifactId>server.markhome.mcf.v3_1.cfbam.cfbambuff</artifactId>
-        <version>3.1.42</version>
-    </dependency>
   </dependencies>
 	<distributionManagement>
 		<repository>
