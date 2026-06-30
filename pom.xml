@@ -110,17 +110,42 @@
     </dependency>
     <dependency>
         <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfsec.cfsecpub</artifactId>
+        <version>3.1.42</version>
+    </dependency>
+    <dependency>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfint.cfintpub</artifactId>
+        <version>3.1.42</version>
+    </dependency>
+    <dependency>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfbam.cfbampub</artifactId>
+        <version>3.1.42</version>
+    </dependency>
+    <dependency>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfsec.cfsecprot</artifactId>
+        <version>3.1.42</version>
+    </dependency>
+    <dependency>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfint.cfintprot</artifactId>
+        <version>3.1.42</version>
+    </dependency>
+    <dependency>
+        <groupId>server.markhome.mcf.v3_1</groupId>
+        <artifactId>server.markhome.mcf.v3_1.cfbam.cfbamprot</artifactId>
+        <version>3.1.42</version>
+    </dependency>
+    <dependency>
+        <groupId>server.markhome.mcf.v3_1</groupId>
         <artifactId>server.markhome.mcf.v3_1.cfsec.cfsec</artifactId>
         <version>3.1.42</version>
     </dependency>
     <dependency>
         <groupId>server.markhome.mcf.v3_1</groupId>
         <artifactId>server.markhome.mcf.v3_1.cfint.cfint</artifactId>
-        <version>3.1.42</version>
-    </dependency>
-    <dependency>
-        <groupId>server.markhome.mcf.v3_1</groupId>
-        <artifactId>server.markhome.mcf.v3_1.cfbam.cfbam</artifactId>
         <version>3.1.42</version>
     </dependency>
   </dependencies>
